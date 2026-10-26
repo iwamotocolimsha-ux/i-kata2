@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta name="description" content="I-KATA株式会社。リフォームと不動産をひとつの窓口で。住まいのことを、まるごと相談できます。">
+<meta name="robots" content="noindex,nofollow">
+<title>I-KATA株式会社｜リフォームと不動産、住まいのことを一つの窓口で。</title>
+<style>
+:root{
+  --bg:#f3efe8; --paper:#fcfaf6; --ink:#231913; --sub:#645446; --line:#d4c5b3;
+  --brown:#5a3f2e; --brown-deep:#34241a; --sand:#d6c2a8; --accent:#9c7a58;
+  --max:1180px; --radius:20px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0; color:var(--ink); background:var(--bg); font-family:"Hiragino Sans","Yu Gothic","YuGothic",Meiryo,sans-serif; line-height:1.9; letter-spacing:.03em}
+img{display:block; width:100%; height:auto}
+a{color:inherit; text-decoration:none}
+button,input,select,textarea{font:inherit}
+:focus-visible{outline:3px solid #c7924b; outline-offset:2px}
+.container{width:min(calc(100% - 32px), var(--max)); margin:0 auto}
+.serif{font-family:"Yu Mincho","Hiragino Mincho ProN","YuMincho",serif}
+.header{position:sticky; top:0; z-index:30; backdrop-filter:blur(14px); background:rgba(252,250,246,.82); border-bottom:1px solid rgba(90,63,46,.08)}
+.header__inner{display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:74px}
+.brand{display:flex; align-items:center; gap:14px}
+.brand__mark{width:54px; height:54px; border-radius:14px; background:linear-gradient(160deg,#6c4c36,#3e2a1e); color:#fff; display:grid; place-items:center; font-size:22px}
+.brand__name{font-size:26px; font-weight:700; letter-spacing:.08em}
+.brand__sub{display:block; font-size:12px; color:var(--sub); letter-spacing:.08em}
+.nav{display:flex; gap:22px; align-items:center; font-size:14px}
+.nav a{white-space:nowrap}
+.btn{display:inline-flex; align-items:center; justify-content:center; border-radius:999px; padding:14px 22px; border:1px solid transparent; transition:.2s ease}
+.btn--form{background:var(--brown); color:#fff}
+.btn--ghost{background:transparent; border-color:rgba(255,255,255,.4); color:#fff}
+.btn--outline{background:transparent; border-color:var(--line); color:var(--brown-deep)}
+.hero{position:relative; color:#fff; background:#1e140f}
+.hero::before{content:""; position:absolute; inset:0; background:
+linear-gradient(90deg, rgba(17,10,6,.72) 0%, rgba(17,10,6,.48) 35%, rgba(17,10,6,.10) 68%, rgba(17,10,6,.42) 100%),
+linear-gradient(180deg, rgba(17,10,6,.12), rgba(17,10,6,.38));}
+.hero__media{position:absolute; inset:0}
+.hero__media img{width:100%; height:100%; object-fit:cover; object-position:center center}
+.hero__inner{position:relative; min-height:clamp(720px, 88svh, 980px); display:grid; grid-template-columns:1.02fr .86fr; align-items:end; gap:32px; padding:44px 0 54px}
+.hero__copy{max-width:720px; padding-top:72px}
+.hero__kicker{display:inline-flex; align-items:center; gap:10px; font-size:13px; letter-spacing:.10em; opacity:.92}
+.hero__kicker::before{content:""; width:28px; height:1px; background:currentColor}
+.hero h1{margin:22px 0 20px; font-size:clamp(40px, 6.8vw, 82px); line-height:1.08; letter-spacing:.01em; font-weight:700}
+.hero__lead{max-width:35em; color:rgba(255,255,255,.88); font-size:15px}
+.hero__actions{display:flex; flex-wrap:wrap; gap:12px; margin-top:26px}
+.hero__deck{display:grid; gap:14px; align-self:end}
+.service-tile{background:rgba(252,250,246,.92); color:var(--ink); border-radius:26px; padding:24px; display:grid; grid-template-columns:auto 1fr; gap:16px; box-shadow:0 30px 70px rgba(0,0,0,.18)}
+.service-tile__icon{width:62px; height:62px; border-radius:18px; background:#f1eadf; display:grid; place-items:center; color:var(--brown)}
+.service-tile__title{font-size:34px; line-height:1.1; margin:0 0 6px; color:var(--brown-deep)}
+.service-tile__meta{font-size:14px; color:var(--sub)}
+.service-tile__link{margin-top:10px; display:inline-flex; gap:8px; color:var(--brown); font-weight:700}
+.statement{background:var(--paper); border-bottom:1px solid var(--line)}
+.statement__inner{display:grid; grid-template-columns:1.1fr .9fr; gap:28px; padding:34px 0}
+.statement__big{font-size:clamp(28px,3.7vw,46px); line-height:1.3}
+.statement__small{color:var(--sub); font-size:15px}
+.section{padding:88px 0}
+.section--paper{background:var(--paper)}
+.section__head{display:grid; gap:10px; margin-bottom:38px; max-width:860px}
+.section__eyebrow{font-size:13px; color:var(--accent)}
+.section__title{font-size:clamp(30px,4.2vw,56px); line-height:1.2; margin:0}
+.section__intro{color:var(--sub); max-width:42em}
+.reform-grid{display:grid; grid-template-columns:1fr 1fr; gap:28px; align-items:start}
+.photo-card{background:#fff; border:1px solid var(--line); border-radius:24px; overflow:hidden; box-shadow:0 20px 40px rgba(67,45,32,.08)}
+.photo-card img{aspect-ratio:4/5; object-fit:cover}
+.photo-card figcaption{padding:14px 18px; font-size:13px; color:var(--sub)}
+.panel{background:#fff; border:1px solid var(--line); border-radius:24px; padding:28px}
+.panel h3{margin:0 0 18px; font-size:26px; line-height:1.3}
+.strengths{display:grid; gap:16px}
+.strength{padding:0 0 16px; border-bottom:1px solid #ebe2d7}
+.strength:last-child{border-bottom:0; padding-bottom:0}
+.strength h4{margin:0 0 6px; font-size:18px}
+.strength p{margin:0; color:var(--sub); font-size:14px}
+.work-tags{display:flex; flex-wrap:wrap; gap:10px; margin-top:22px}
+.work-tags span{padding:10px 14px; background:#f5f0e9; border-radius:999px; border:1px solid var(--line); font-size:14px}
+.gallery{display:grid; grid-template-columns:repeat(3, 1fr); gap:18px; margin-top:24px}
+.gallery figure{margin:0; background:#fff; border-radius:22px; overflow:hidden; border:1px solid var(--line)}
+.gallery img{aspect-ratio:4/3; object-fit:cover}
+.gallery figcaption{padding:12px 14px; font-size:13px; color:var(--sub)}
+.estate-layout{display:grid; grid-template-columns:.96fr 1.04fr; gap:28px; align-items:start}
+.estate-photo{background:#fff; border:1px solid var(--line); border-radius:26px; overflow:hidden}
+.estate-photo img{aspect-ratio:4/5; object-fit:cover}
+.service-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:16px}
+.service-box{padding:22px; background:#fff; border:1px solid var(--line); border-radius:22px}
+.service-box h4{margin:0 0 8px; font-size:19px}
+.service-box p{margin:0; font-size:14px; color:var(--sub)}
+.valuation{margin-top:18px; padding:28px; background:linear-gradient(135deg, #fff 0%, #f5efe7 100%); border:1px solid var(--line); border-radius:24px}
+.valuation h3{margin:0 0 10px; font-size:28px}
+.valuation p{margin:0 0 20px; color:var(--sub)}
+.band{margin-top:32px; border-radius:28px; overflow:hidden; position:relative}
+.band img{aspect-ratio:16/8; object-fit:cover}
+.band__overlay{position:absolute; inset:0; background:linear-gradient(90deg, rgba(20,12,8,.72), rgba(20,12,8,.14)); display:flex; align-items:flex-end; padding:28px; color:#fff}
+.band__overlay h3{margin:0 0 6px; font-size:32px}
+.band__overlay p{margin:0; max-width:32em; color:rgba(255,255,255,.85)}
+.company-grid{display:grid; grid-template-columns:.95fr 1.05fr; gap:28px}
+.company-card,.contact-card{background:#fff; border:1px solid var(--line); border-radius:24px; padding:28px}
+.company-list{display:grid; gap:14px}
+.company-row{display:grid; grid-template-columns:150px 1fr; gap:16px; padding-bottom:14px; border-bottom:1px solid #eee5da}
+.company-row:last-child{border-bottom:0; padding-bottom:0}
+.company-row dt{font-weight:700}
+.company-row dd{margin:0; color:var(--sub)}
+.contact-card h3{margin:0 0 10px; font-size:28px}
+.contact-actions{display:flex; flex-wrap:wrap; gap:12px; margin-top:20px}
+.note{font-size:12px; color:var(--sub); margin-top:12px}
+.footer{padding:36px 0 110px; color:var(--sub)}
+.footer__inner{display:flex; justify-content:space-between; gap:18px; border-top:1px solid var(--line); padding-top:24px}
+.mobile-fixed{display:none}
+@media (max-width: 980px){
+  .nav{display:none}
+  .hero__inner,.statement__inner,.reform-grid,.estate-layout,.company-grid{grid-template-columns:1fr}
+  .hero__copy{padding-top:32px}
+  .hero__deck{max-width:640px}
+}
+@media (max-width: 760px){
+  .header__inner{min-height:68px}
+  .brand__mark{width:46px; height:46px}
+  .brand__name{font-size:24px}
+  .hero__inner{min-height:auto; padding:24px 0 28px; gap:20px}
+  .hero h1{font-size:clamp(34px, 12vw, 54px)}
+  .service-tile{padding:18px; gap:14px; border-radius:22px}
+  .service-tile__title{font-size:28px}
+  .statement__inner{padding:28px 0}
+  .section{padding:68px 0}
+  .gallery,.service-grid{grid-template-columns:1fr}
+  .company-row{grid-template-columns:1fr; gap:6px}
+  .mobile-fixed{display:grid; grid-template-columns:repeat(3,1fr); position:fixed; left:0; right:0; bottom:0; z-index:35; background:rgba(255,255,255,.98); border-top:1px solid var(--line); box-shadow:0 -10px 30px rgba(44,30,22,.10)}
+  .mobile-fixed a{display:grid; gap:3px; place-items:center; min-height:66px; font-size:12px; color:var(--brown-deep)}
+  .mobile-fixed a strong{font-size:13px}
+  .mobile-fixed a:nth-child(2){background:var(--brown); color:#fff}
+}
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="container header__inner">
+    <a class="brand" href="#top" aria-label="I-KATA株式会社 トップへ">
+      <span class="brand__mark">家</span>
+      <span>
+        <span class="brand__name">I-KATA</span>
+        <span class="brand__sub">リフォームと不動産を、一つの窓口で。</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="主要メニュー">
+      <a href="#reform">リフォーム</a>
+      <a href="#estate">不動産・空き家</a>
+      <a href="properties.html">物件情報</a>
+      <a href="#company">会社概要</a>
+      <a class="btn btn--form" href="https://www.i-kata.jp/contact/">フォーム相談</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero__media"><img src="assets/hero-main.jpg" alt="大きな梁と庭をのぞむ、改修後の町家のリビング空間"></div>
+    <div class="container hero__inner">
+      <div class="hero__copy">
+        <p class="hero__kicker">I-KATA株式会社</p>
+        <h1>住まいのことを、<br>まるごと「アイカタ」に。</h1>
+        <p class="hero__lead">新築じゃない、だからおもしろい。今あるものを活かしながら暮らしを整えるリフォームも、住まいの価値をつなぐ不動産相談も。I-KATAは、住まいの課題を解決するための窓口を一つにまとめた会社です。</p>
+        <div class="hero__actions">
+          <a class="btn btn--form" href="https://www.i-kata.jp/contact/">フォームで相談する</a>
+          <a class="btn btn--ghost" href="#estate">無料査定を見る</a>
+        </div>
+      </div>
+      <div class="hero__deck">
+        <a class="service-tile" href="#reform">
+          <span class="service-tile__icon" aria-hidden="true">🔨</span>
+          <span>
+            <h2 class="service-tile__title serif">リフォーム</h2>
+            <span class="service-tile__meta">今の暮らしを、もっと快適に。小さな工事からリノベーションまで。</span>
+            <span class="service-tile__link">リフォームの強みを見る</span>
+          </span>
+        </a>
+        <a class="service-tile" href="#estate">
+          <span class="service-tile__icon" aria-hidden="true">🏠</span>
+          <span>
+            <h2 class="service-tile__title serif">不動産</h2>
+            <span class="service-tile__meta">売る・買うだけでなく、相続した家や空き家の相談まで。</span>
+            <span class="service-tile__link">不動産の相談内容を見る</span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="statement">
+    <div class="container statement__inner">
+      <div class="statement__big serif">暮らしの始まりから、その先まで。<br>住まいのことを、一つの窓口で。</div>
+      <div class="statement__small">営業だけでも、工事だけでもない。I-KATAは、住まいの困りごとを整理し、必要な選択肢を並べ、前に進める会社です。リフォームも不動産も、別々に相談しなくて大丈夫です。</div>
+    </div>
+  </section>
+
+  <section class="section" id="reform">
+    <div class="container">
+      <div class="section__head">
+        <p class="section__eyebrow">I-KATA リフォーム</p>
+        <h2 class="section__title serif">暮らしの空気まで変わる、<br>住まいの手直しを。</h2>
+        <p class="section__intro">掲載写真も、古い住まいを今の暮らしに合わせて整えた空間です。木の梁や庭とのつながりを活かしながら、明るさ・動線・居場所を見直す。I-KATAのリフォームは、見た目だけでなく、暮らし方から整えます。</p>
+      </div>
+
+      <div class="reform-grid">
+        <figure class="photo-card">
+          <img src="assets/reform-living.jpg" alt="天井の梁と庭の景色を活かした、改修後のリビング空間">
+          <figcaption>リビング・ダイニング・庭がつながる、改修後の住空間。大きな梁や格子を残しながら、今の暮らしに合わせて再編集したイメージです。</figcaption>
+        </figure>
+
+        <div class="panel">
+          <h3 class="serif">I-KATAリフォームの4つの強み</h3>
+          <div class="strengths">
+            <section class="strength">
+              <h4>施工までできる</h4>
+              <p>営業窓口だけで終わらず、経験のある職人・施工側の視点を踏まえて、品質や仕上がりまで見通した提案を行います。</p>
+            </section>
+            <section class="strength">
+              <h4>営業から管理まで一貫対応</h4>
+              <p>相談、現地確認、内容整理、工事の進行まで一人の担当軸で進むため、伝え漏れや行き違いが起きにくい体制です。</p>
+            </section>
+            <section class="strength">
+              <h4>必要なことを、きちんと伝える</h4>
+              <p>希望をそのまま受け取るだけではなく、予算・優先順位・工事の向き不向きも含めて、必要な判断材料を言葉にします。</p>
+            </section>
+            <section class="strength">
+              <h4>あなたのアイデアを取り入れる</h4>
+              <p>「こんな暮らし方がしたい」という感覚から出発し、使い方・収納・家具・光の入り方まで一緒に考え、形にします。</p>
+            </section>
+          </div>
+
+          <div class="work-tags" aria-label="対応できる工事">
+            <span>内装工事（壁・床・天井）</span>
+            <span>水まわり工事（キッチン・浴室・洗面・トイレ）</span>
+            <span>設備交換（給湯器・エアコンほか）</span>
+            <span>造作家具・建具</span>
+            <span>小規模修繕</span>
+            <span>リノベーション</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery" aria-label="リフォーム写真ギャラリー">
+        <figure>
+          <img src="assets/reform-dining.jpg" alt="ダイニングとキッチンがつながる改修空間">
+          <figcaption>食卓とキッチンを見渡せる動線。毎日の使いやすさを優先した空間づくり。</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/reform-courtyard.jpg" alt="庭の光が室内に届く町家の改修空間">
+          <figcaption>庭から入る光を活かした計画。暗さが気になりやすい既存住宅にも有効です。</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/craft-beams.jpg" alt="梁と木組みが印象的な住まいの天井">
+          <figcaption>残せる魅力は残す。古い住まいならではの木組みや表情を、価値として活かします。</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper" id="estate">
+    <div class="container">
+      <div class="section__head">
+        <p class="section__eyebrow">I-KATA 不動産</p>
+        <h2 class="section__title serif">住まいの価値をつなぎ、未来へ。</h2>
+        <p class="section__intro">売る・買うだけではなく、相続した家、空き家、これからどう使うか迷っている住まいの相談まで。I-KATAは、不動産と住まいの困りごとをまとめて受け止めます。</p>
+      </div>
+
+      <div class="estate-layout">
+        <figure class="estate-photo">
+          <img src="assets/estate-entry.jpg" alt="木の格子と植栽がある住まいの玄関アプローチ">
+        </figure>
+
+        <div>
+          <div class="service-grid">
+            <article class="service-box">
+              <h4>不動産売買・仲介</h4>
+              <p>土地・戸建・中古住宅・収益物件まで。売る側も買う側も、条件整理から相談できます。</p>
+            </article>
+            <article class="service-box">
+              <h4>買取・仲介の比較</h4>
+              <p>急ぎたいのか、より良い条件を目指したいのか。状況に合わせて、売り方の選択肢を整理します。</p>
+            </article>
+            <article class="service-box">
+              <h4>空き家管理サポート</h4>
+              <p>管理が難しい空き家は、活用・売却・リフォーム・維持管理の方向性から一緒に考えます。</p>
+            </article>
+            <article class="service-box">
+              <h4>相続後の住まい相談</h4>
+              <p>相続登記の義務化もふまえ、相続した不動産の整理、相談先の案内、次の一歩の決め方を支えます。</p>
+            </article>
+          </div>
+
+          <div class="valuation">
+            <h3 class="serif">不動産の無料査定をしています。</h3>
+            <p>「まずは相場だけ知りたい」という相談でも大丈夫です。売却前提でなくても、お気軽にご相談ください。</p>
+            <a class="btn btn--form" href="https://www.i-kata.jp/contact/">無料査定を相談する</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="band">
+        <img src="assets/craft-beams.jpg" alt="既存の木組みを活かした住空間">
+        <div class="band__overlay">
+          <div>
+            <h3 class="serif">空き家は、直す・活かす・つなぐまで考える。</h3>
+            <p>建物の状態が分かるから、売る前に直すべきか、そのまま活かすべきかも判断しやすい。不動産とリフォームを一つの会社で行う強みです。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="property">
+    <div class="container">
+      <div class="section__head">
+        <p class="section__eyebrow">物件情報</p>
+        <h2 class="section__title serif">物件選びも、買った後のことまで。</h2>
+        <p class="section__intro">中古住宅・土地・住み替えの検討時にも、改修の視点を踏まえて見立てるのがI-KATAの特徴です。物件一覧と詳細ページでは、暮らし方と総予算の考え方まで案内しています。</p>
+      </div>
+      <div class="contact-actions">
+        <a class="btn btn--outline" href="properties.html">物件一覧を見る</a>
+        <a class="btn btn--form" href="https://www.i-kata.jp/contact/">物件探しを相談する</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper" id="company">
+    <div class="container company-grid">
+      <div class="company-card">
+        <div class="section__head" style="margin-bottom:22px">
+          <p class="section__eyebrow">会社概要</p>
+          <h2 class="section__title serif" style="font-size:clamp(28px,3.6vw,42px)">住まいの相方として、<br>地域で動く会社です。</h2>
+        </div>
+        <dl class="company-list">
+          <div class="company-row"><dt>商号</dt><dd>I-KATA株式会社</dd></div>
+          <div class="company-row"><dt>本店所在地</dt><dd>石川県金沢市天神町二丁目2番26号</dd></div>
+          <div class="company-row"><dt>設立</dt><dd>2026年8月3日</dd></div>
+          <div class="company-row"><dt>資本金</dt><dd>300万円</dd></div>
+          <div class="company-row"><dt>代表取締役</dt><dd>河本 健志</dd></div>
+          <div class="company-row"><dt>取締役</dt><dd>岩本 麻衣子</dd></div>
+          <div class="company-row"><dt>会社法人等番号</dt><dd>2200-01-027506</dd></div>
+        </dl>
+      </div>
+
+      <div class="contact-card" id="contact">
+        <h3 class="serif">相談の入口は、一つで大丈夫です。</h3>
+        <p>リフォーム、不動産、無料査定、物件探し。どの相談から始めるべきか決まっていなくても、フォームにそのまま書いてください。内容に応じて整理してご案内します。</p>
+        <div class="contact-actions">
+          <a class="btn btn--form" href="https://www.i-kata.jp/contact/">フォームで相談する</a>
+          <a class="btn btn--outline" href="https://www.google.com/maps/search/?api=1&query=%E7%9F%B3%E5%B7%9D%E7%9C%8C%E9%87%91%E6%B2%A2%E5%B8%82%E5%A4%A9%E7%A5%9E%E7%94%BA2%E4%B8%81%E7%9B%AE2%E7%95%AA26%E5%8F%B7" target="_blank" rel="noopener">MAPを見る</a>
+        </div>
+        <p class="note">※電話番号は未設定のため、現時点ではフォーム相談を主導線として掲載しています。</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div>
+      <strong>I-KATA株式会社</strong><br>
+      リフォームと不動産を、一つの窓口で。
+    </div>
+    <div>© I-KATA</div>
+  </div>
+</footer>
+
+<nav class="mobile-fixed" aria-label="スマートフォン固定メニュー">
+  <a href="#contact"><strong>電話する</strong><span>準備中</span></a>
+  <a href="https://www.i-kata.jp/contact/"><strong>フォーム相談</strong><span>24時間受付</span></a>
+  <a href="https://www.google.com/maps/search/?api=1&query=%E7%9F%B3%E5%B7%9D%E7%9C%8C%E9%87%91%E6%B2%A2%E5%B8%82%E5%A4%A9%E7%A5%9E%E7%94%BA2%E4%B8%81%E7%9B%AE2%E7%95%AA26%E5%8F%B7" target="_blank" rel="noopener"><strong>MAP</strong><span>店舗案内</span></a>
+</nav>
+</body>
+</html>
