@@ -3,7 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="robots" content="noindex">
 <meta name="format-detection" content="telephone=no">
 <meta name="description" content="I-KATA株式会社。リフォームと不動産をひとつの窓口で。住まいのことを、まるごと相談できます。">
 <meta name="robots" content="noindex,nofollow">
@@ -132,6 +131,29 @@ linear-gradient(180deg, rgba(17,10,6,.12), rgba(17,10,6,.38));}
   .mobile-fixed a strong{font-size:13px}
   .mobile-fixed a:nth-child(2){background:var(--brown); color:#fff}
 }
+
+/* 指定の改行位置を保ち、画面幅に合わせて見出しの文字サイズを調整。 */
+.hero__copy{
+  min-width:0;
+  container-type:inline-size;
+}
+.hero .hero__title{
+  font-size:clamp(32px,5vw,74px);
+  font-size:min(82px,12cqi);
+}
+.hero__title-line{
+  white-space:nowrap;
+}
+#property .section__head{
+  max-width:none;
+  min-width:0;
+  container-type:inline-size;
+}
+#property .section__title{
+  white-space:nowrap;
+  font-size:clamp(16px,5.25vw,56px);
+  font-size:min(56px,5.85cqi);
+}
 </style>
 </head>
 <body>
@@ -160,7 +182,7 @@ linear-gradient(180deg, rgba(17,10,6,.12), rgba(17,10,6,.38));}
     <div class="container hero__inner">
       <div class="hero__copy">
         <p class="hero__kicker">I-KATA株式会社</p>
-        <h1>住まいのことを、<br>まるごと「アイカタ」に。</h1>
+        <h1 class="hero__title"><span class="hero__title-line">住まいのことを、</span><br><span class="hero__title-line">まるごと</span><br><span class="hero__title-line">「アイカタ」に。</span></h1>
         <p class="hero__lead">新築じゃない、だからおもしろい。今あるものを活かしながら暮らしを整えるリフォームも、住まいの価値をつなぐ不動産相談も。I-KATAは、住まいの課題を解決するための窓口を一つにまとめた会社です。</p>
         <div class="hero__actions">
           <a class="btn btn--form" href="https://www.i-kata.jp/contact/">フォームで相談する</a>
