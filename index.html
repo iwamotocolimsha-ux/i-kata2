@@ -258,6 +258,34 @@ img{max-width:100%}
   .mobile-fixed{display:none!important}
   body{padding-bottom:0}
 }
+
+/* Copy layout: preserve the two specified sentences without mid-sentence wraps. */
+.statement__big{
+  min-width:0;
+  container-type:inline-size;
+}
+.statement__line{
+  display:block;
+  white-space:nowrap;
+  font-size:clamp(16px,3vw,36px);
+  line-height:1.65;
+  letter-spacing:.01em;
+}
+/* Keep the consultation heading in two meaningful, readable phrases. */
+.contact-card{
+  container-type:inline-size;
+}
+.contact-card .contact-title-line{
+  display:block;
+  white-space:nowrap;
+  font-size:clamp(20px,3.4vw,28px);
+  line-height:1.6;
+  letter-spacing:0;
+}
+@supports (font-size:1cqi){
+  .statement__line{font-size:min(42px,6cqi)}
+  .contact-card .contact-title-line{font-size:min(28px,8.6cqi)}
+}
 </style>
 </head>
 <body>
@@ -314,7 +342,7 @@ img{max-width:100%}
 </section>
 <section class="statement">
 <div class="container statement__inner">
-<div class="statement__big serif">暮らしの始まりから、その先まで。<br/>住まいのことを、一つの窓口で。</div>
+<div class="statement__big serif"><span class="statement__line">暮らしの始まりから、その先まで。</span><span class="statement__line">住まいのことを、一つの窓口で。</span></div>
 <div class="statement__small">営業だけでも、工事だけでもない。I-KATAは、住まいの困りごとを整理し、必要な選択肢を並べ、前に進める会社です。不動産もリフォームも、別々に相談しなくて大丈夫です。</div>
 </div>
 </section>
@@ -455,8 +483,8 @@ img{max-width:100%}
 </dl>
 </div>
 <div class="contact-card" id="contact">
-<h3 class="serif">相談の入口は、一つで大丈夫です。</h3>
-<p>不動産、リフォーム、無料査定、物件探し。どの相談から始めるべきか決まっていなくても、フォームにそのまま書いてください。内容に応じて整理してご案内します。</p>
+<h3 class="serif"><span class="contact-title-line">不動産もリフォームも、</span><span class="contact-title-line">まとめて相談。</span></h3>
+<p>物件探しも、売却も、リフォームも。相談先を探し分ける手間なく、一つの窓口でまとめてご相談いただけます。まだ決まっていないことも、そのままお聞かせください。</p>
 <div class="contact-actions">
 <a class="btn btn--form" href="https://www.i-kata.jp/contact/">フォームで相談する</a>
 <a class="btn btn--outline" href="https://www.google.com/maps/search/?api=1&amp;query=%E7%9F%B3%E5%B7%9D%E7%9C%8C%E9%87%91%E6%B2%A2%E5%B8%82%E5%A4%A9%E7%A5%9E%E7%94%BA2%E4%B8%81%E7%9B%AE2%E7%95%AA26%E5%8F%B7" rel="noopener" target="_blank">MAPを見る</a>
